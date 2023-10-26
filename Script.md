@@ -33,7 +33,7 @@ Stream logs
 -----------
 
 ```powershell
-az webapp log config --web-server-logging 'filesystem' --name $APP_SERVICE_NAME --resource-group $RESOURCE_GROUP_NAME
+ 
 
 az webapp log tail --name $APP_SERVICE_NAME --resource-group $RESOURCE_GROUP_NAME
 ```
