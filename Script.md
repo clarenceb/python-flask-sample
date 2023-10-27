@@ -16,6 +16,10 @@ Run the app locally
 -------------------
 
 ```sh
+cp .env.template .env
+# If demonstrating the Chat Completions part with Azure Open AI then
+# fill in AZURE_OPENAI_KEY and AZURE_OPENAI_ENDPOINT with your service's values.
+
 flask run
 ```
 
@@ -40,7 +44,7 @@ az webapp log config --web-server-logging 'filesystem' --name $APP_SERVICE_NAME 
 az webapp log tail --name $APP_SERVICE_NAME --resource-group $RESOURCE_GROUP_NAME
 ```
 
-(Optional) requires GitHub Copilot - simple load test
+(Optional) Requires GitHub Copilot - simple load test
 -----------------------------------------------------
 
 Install `k6` load testing tool.
@@ -63,6 +67,9 @@ Logs and metrics check:
 
 * Check the log stream for the load test results.
 * Check the Azure Monitor Metrics for web app - Requests and Response Time.
+
+(Optional) Basic Azure OpenAI Chat Completions integration
+----------------------------------------------------------
 
 Add code to the app Azure OpenAPI Studio's Chat Playground:
 
@@ -88,7 +95,9 @@ You are an AI assistant that provides cheerful greetings to people.
 * Set the app settings on the web app:
 
 ```sh
-# Set AZURE_OPENAI_ENDPOINT and AZURE_OPENAI_KEY in openai-vars.sh
+# If demonstrating the Chat Completions part with Azure Open AI then
+# fill in AZURE_OPENAI_KEY and AZURE_OPENAI_ENDPOINT with your service's values.
+cp openai-vars.sh.template openai-vars.sh
 source ./openai-vars.sh
 
 az webapp config appsettings set \
