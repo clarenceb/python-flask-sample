@@ -83,7 +83,7 @@ You are an AI assistant that provides cheerful greetings to people.
 
 * Click the enter button to generate a repsponse.
 
-* Click View Code and copy and paste into `app.py`
+* Click View Code and copy and paste into `app.py` - name hardcoded name to the name variable using string interpolation.
 * Deploy the app again
 * Set the app settings on the web app:
 
@@ -99,6 +99,8 @@ az webapp config appsettings set \
 unset AZURE_OPENAI_KEY
 unset AZURE_OPENAI_ENDPOINT
 ```
+
+Test the deployed app works with a generated greeting using Azure Open AI.
 
 Cleanup
 -------
