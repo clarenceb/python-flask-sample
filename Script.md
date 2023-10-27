@@ -24,7 +24,7 @@ Deploy to Azure App Service on Linux
 
 ```sh
 RESOURCE_GROUP_NAME="helloazureflask"
-APP_SERVICE_NAME="helloazureflask2"
+APP_SERVICE_NAME="helloazureflask"
 
 az group create --name $RESOURCE_GROUP_NAME --location "Australia East"
 
